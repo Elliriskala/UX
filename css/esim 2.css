@@ -11,6 +11,13 @@
     background-attachment: fixed;    
 }
 
+:root {
+    --lavender-web: #d7dae5ff;
+    --columbia-blue: #b9cddaff;
+    --tiffany-blue: #a6d8d4ff;
+    --cambridge-blue: #8eaf9dff;
+    --gray: #6b7d7dff;
+}
 
 .pic {
     width: 500px;
