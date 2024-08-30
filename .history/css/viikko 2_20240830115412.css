@@ -44,8 +44,8 @@ dialog {
 }
 
 #login-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 20px;
 }
 
@@ -147,7 +147,7 @@ nav {
     max-width: 1000px;
     z-index: 10;
     position: relative;
-    background-image: url(../img/sushi_background8.jpg);
+    background-image: url(../img/sushi5.jpg);
     background-size: cover;
     background-position: center left 20px;
 }

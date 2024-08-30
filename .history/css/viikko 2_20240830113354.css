@@ -6,7 +6,7 @@
 
 body {
     overflow: hidden;
-    background-image: url(../img/sushi_background3.jpg);
+    background-image: url(../img/sushi_background11.jpg);
     background-size: cover;
     margin: 0;
 }
@@ -44,7 +44,7 @@ dialog {
 }
 
 #login-image {
-    width: 200px;
+    width: 180px;
     height: 200px;
     border-radius: 20px;
 }
@@ -147,7 +147,7 @@ nav {
     max-width: 1000px;
     z-index: 10;
     position: relative;
-    background-image: url(../img/sushi_background8.jpg);
+    background-image: url(../img/sushi3.jpg);
     background-size: cover;
     background-position: center left 20px;
 }
