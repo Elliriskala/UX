@@ -522,13 +522,13 @@ footer {
     margin: 30px auto;
     background-color: var(--wine-red);
     color: var(--bisque-color);
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
     border-radius: 10px;
   }
   #login-image {
     width: 150px;
-    height: 170px;
+    height: 200px;
     border-radius: 20px;
   }
 }
