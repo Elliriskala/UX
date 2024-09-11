@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-color: lightgreen;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+#image {
+  width: 400px;
+  height: 400px;
+  background-image: url(../img/sakura.png);
+  background-size: contain;
+}
+</style>
+</head>
+<body>
+  <h2>This is a header</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iste quibusdam, ipsa amet veritatis ad in aliquid architecto assumenda, voluptate fugiat, placeat adipisci obcaecati deleniti dignissimos animi vel. Laborum, unde.
+    </p>
+    <p>
+      Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "lightgreen".
+    </p>
+    <h4>Background image</h4>
+    <div id="image"></div>
+    <h5>Another image</h5>
+    <img src="../img/sushi_forest.png" alt="forest" id="sushiforest"/>
+</body>
+</html>

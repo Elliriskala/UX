@@ -1,0 +1,221 @@
+
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    font-size: 20px;
+}
+
+.hero {
+    overflow: hidden;
+    background-image: url(../img/sushi_background3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    height: 800px;
+}
+
+body:has(dialog[open]) {
+    overflow-y: hidden;
+}
+
+:root {
+  --bisque-color: bisque;
+  --cotton-candy: rgb(235, 222, 215);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(59, 69, 57);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+#login:hover {
+    color: var(--forest-green);
+    transition: all 1s;
+}
+
+#login {
+    font-size: 30px;
+    color: var(--bisque-color);
+    transition: all;
+    display: inline-block;
+    margin: auto;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+dialog {
+    width: 500px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: var(--wine-red);
+    color: var(--bisque-color);
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#login-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    border-radius: 4px;
+    background-color: var(--cotton-candy);
+    border-left: 8px solid;
+    transition: border-color 0.5s ease-in;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+input:invalid {
+    border-left-color: var(--intense-red);
+}
+
+input:valid {
+    border-left-color: var(--lime-green);
+}
+
+.registration {
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+.button {
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    background-color: var(--khaki-green);
+    color: var(--bisque-color);
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: var(--wine-red);
+    transition: 1s;
+}
+
+dialog::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      var(--khaki-green),
+      var(--lime-green),
+      var(--khaki-green),
+      var(--lime-green)
+    );
+    opacity: 0.75;
+  }
+
+nav {
+    overflow: hidden;
+    background-color: var(--grey-green);
+    margin: auto;
+    padding: 20px;
+    bo
+}
+
+.companyname {
+    width: 20%;
+    display: inline-block;
+}
+
+.company {
+    display: inline-block;
+    list-style-type: none;
+    color: var(--bisque-color);
+    font-size: 20px;
+}
+
+.nav-bar {
+    display: inline-block;
+    width: 70%;
+}
+
+.main, .menu, .contact {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--bisque-color);
+}
+
+.main:hover, .menu:hover, .contact:hover {
+    color: var(--wine-red);
+    transition: all 1s;
+}
+
+.more-content {
+  overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+    height: 100px;}
+
+.article {
+    margin: auto;
+    width: 80%;
+    height: 450px;
+    z-index: 10;
+    display: flex;
+    background-image: url(../img/sushi_background8.jpg);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+.seating {
+    width: 300px;
+    background-image: url(../img/sushi_forest.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 2rem;
+}
+
+.aboutus {
+    width: 50%;
+    max-width: 370px;
+    color: var(--bisque-color);
+    line-height: 1.5;
+    padding: 2rem;
+    padding-left: 0.5rem;
+  }
+
+#sakura {
+    width: auto;
+    height: auto;
+    background-image: url(../img/sakura.png);
+    background-size: contain;
+    overflow: hidden;
+    position: absolute;
+    z-index: 20;
+
+}
+
+footer {
+    overflow: hidden;
+    margin-top: 2rem;
+    background-color: var(--wine-red);
+    color:  var(--bisque-color);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+  }
+

@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(235, 223, 217);
+  --dust-pink: rgb(205, 189, 189);
+  --raspberry-pink: rgb(192, 164, 164);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(158, 173, 154);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+.container {
+  background-color: var(--cotton-candy);
+  display: flex;
+  height: 100vh;
+
+}
+
+#left {
+  background-color: var(--raspberry-pink);
+  flex: 1;
+}
+
+#right {
+  flex: 1;
+  background-color: var(--grey-green);
+}
+
+.image {
+  background-image: url(../img/sushi_background5.jpg);
+  background-size: cover;
+}

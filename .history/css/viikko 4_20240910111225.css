@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(213, 195, 185);
+  --dust-pink: rgb(205, 189, 189);
+  --raspberry-pink: rgb(200, 127, 127);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(91, 110, 86);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+.container {
+  background-color: var(--bisque-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#left {
+  background-color: var(--raspberry-pink);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#right {
+  background-color: var(--grey-green);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

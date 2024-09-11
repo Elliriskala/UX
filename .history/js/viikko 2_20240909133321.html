@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Sushi Forest</title>
+    <meta charset="UTF-8" />
+    <link href="../css/viikko 2.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/ce58f4085c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <ul class="companyname">
+          <li class="company">Sushi Forest</li>
+        </ul>
+        <ul class="nav-bar">
+          <li class="main">Main page</li>
+          <li class="menu">Menu</li>
+          <li class="contact">Contact us</li>
+        </ul>
+        <i class="fa-solid fa-right-to-bracket" id="login"></i>
+      </nav>
+    </header>
+    <main>
+      <dialog>
+        <form method="dialog">
+          <fieldset>
+            <legend>Register with your information</legend>
+            <img src="../img/lock.png" alt="loginimage" id="login-image" />
+            <div class="registration">
+              <label>Username:</label>
+              <input
+                type="text"
+                name="Username:"
+                placeholder="Username"
+                minlength="3"
+                maxlength="15"
+                title="Atleast 3 charachters needed"
+                required
+              />
+              <label>Email address:</label>
+              <input
+                type="email"
+                name="Email"
+                id=""
+                placeholder="@metropolia.fi"
+                required
+              />
+              <label>Password:</label>
+              <input
+                type="password"
+                name="Password"
+                id="password"
+                placeholder="Password"
+                pattern="^(?=.*[A-Z])(?=.*\d.*\d).{8,}$"
+                required
+              />
+            </div>
+            <div>
+              <button class="button">Submit</button>
+              <button class="button" id="close">Close</button>
+            </div>
+          </fieldset>
+        </form>
+      </dialog>
+      <div class="hero">
+        <h1>Welcome to Sushi Forest</h1>
+        <p>Enjoy the best sushi in town!</p>
+      </div>
+      <div>More content here</div>
+      <div class="article">
+        <div class="seating">
+          <img src="../img/sushi_forest.png" alt="forest" id="sushiforest" />
+        </div>
+        <div class="aboutus">
+          <p>
+            MORE ABOUT US<br /><b>Welcome to Sushi Forest!</b><br />
+            We are a small sushi restaurant with a big heart. We offer an
+            innovative Japanese cuisine experience with great taste and
+            freshness. Our handmade sushi is cooked in an open kitchen using
+            high quality ingredients. Welcome to enjoy our food and the
+            atmosphere!
+          </p>
+        </div>
+      </div>
+      <img src="../img/sakura.png" alt="sakura" id="sakura" />
+    </main>
+    <footer class="footer">
+      <p>Copyright</p>
+    </footer>
+    <script>
+      const dialog = document.querySelector('dialog');
+      const showButton = document.querySelector('nav > i');
+      const closeButton = document.querySelector('#close');
+
+      // "Show the dialog" button opens the dialog modally
+      showButton.addEventListener('click', () => {
+        dialog.showModal();
+      });
+
+      // "Close" button closes the dialog
+      closeButton.addEventListener('click', () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>

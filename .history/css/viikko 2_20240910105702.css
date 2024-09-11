@@ -1,0 +1,424 @@
+
+@font-face {
+  font-family: 'roboto mono';
+  src: url('../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf')format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'roboto mono', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    font-size: 20px;
+    background-color: var(--dust-pink);
+}
+
+body:has(dialog[open]) {
+    overflow-y: hidden;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(213, 195, 185);
+  --dust-pink: rgb(205, 189, 189);
+  --raspberry-pink: rgb(200, 127, 127);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(91, 110, 86);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+#login:hover {
+    color: var(--forest-green);
+    transition: all 1s;
+}
+
+#login {
+    font-size: 30px;
+    color: var(--bisque-color);
+    transition: all;
+    display: inline-block;
+    margin: auto;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 2px var(--forest-green);
+}
+
+dialog {
+    width: 500px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: var(--wine-red);
+    color: var(--bisque-color);
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#login-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    border-radius: 4px;
+    background-color: var(--cotton-candy);
+    border-left: 8px solid;
+    transition: border-color 0.5s ease-in;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+}
+
+input:invalid {
+    border-left-color: var(--intense-red);
+}
+
+input:valid {
+    border-left-color: var(--lime-green);
+}
+
+.registration {
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+.button {
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+    background-color: var(--khaki-green);
+    color: var(--bisque-color);
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: var(--wine-red);
+    transition: 1s;
+}
+
+dialog::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      var(--khaki-green),
+      var(--lime-green),
+      var(--khaki-green),
+      var(--lime-green)
+    );
+    opacity: 0.75;
+  }
+
+nav {
+    overflow: hidden;
+    background-color: var(--grey-green);
+    margin: auto;
+    padding: 20px;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+      display: flex;
+      flex-direction: column;
+      opacity: 0.8;
+    }
+    .companyname {
+      display: block;
+      width: 100%;
+      position: relative;
+      padding-left: 20px;
+    }
+    .company {
+      font-size: 20px;
+    }
+    #login {
+      width: 20%;
+      position: absolute;
+      right: 0;
+      top: 40;
+    }
+    .main-page, .menu, .contact-us {
+      display: block;
+      width: 100%;
+      padding: 2px;
+    }
+    .main:hover, .menu:hover, .contact:hover {
+      color: var(--wine-red);
+      transition: all 1s;
+  }
+    .nav-bar {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+.nav {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.companyname {
+    width: 20%;
+    display: flex;
+}
+
+.company {
+    display: inline-block;
+    list-style-type: none;
+    color: var(--bisque-color);
+    font-size: 25px;
+    text-shadow: 2px 2px 2px var(--forest-green);
+}
+
+.nav-bar {
+    width: 70%;
+}
+
+.main, .menu, .contact {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--bisque-color);
+    text-shadow: 2px 2px 2px var(--forest-green);
+}
+
+.main:hover, .menu:hover, .contact:hover {
+    color: var(--wine-red);
+    transition: all 1s;
+}
+
+#hero-image {
+  overflow: hidden;
+  background-image: url(../img/sushi_background3.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  min-height: 300px;
+  max-height: 600px;
+  z-index: 10;
+  position: relative;
+}
+
+.hero-text {
+  width: 400px;
+  height: 50vh;
+  min-height: 50px;
+  max-height: 300px;
+  overflow: hidden;
+  position: absolute;
+  top: 12%;
+  left: 7%;
+  color: var(--cotton-candy);
+  font-size: 30px;
+  z-index: 20;
+  text-shadow: 2px 2px 3px var(--raspberry-pink);
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-text {
+      width: 350px;
+      height: 50vh;
+      min-height: 50px;
+      max-height: 300px;
+      overflow: hidden;
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      color: var(--cotton-candy);
+      font-size: 25px;
+      z-index: 20;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+    .hero-text {
+      width: 250px;
+      height: 50vh;
+      min-height: 50px;
+      max-height: 300px;
+      overflow: hidden;
+      top: 15%;
+      left: 5%;
+      color: var(--cotton-candy);
+      font-size: 25px;
+      z-index: 20;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .hero-text {
+      width: 150px;
+      height: 50vh;
+      min-height: 50px;
+      max-height: 300px;
+      overflow: hidden;
+      top: 31%;
+      left: 20;
+      color: var(--cotton-candy);
+      font-size: 20px;
+      z-index: 20;
+    }
+  }
+
+@media screen and (max-width: 400px) {
+    .hero-text {
+      width: 150px;
+      height: 50vh;
+      min-height: 50px;
+      max-height: 300px;
+      overflow: hidden;
+      top: 10%;
+      left: 20;
+      color: var(--cotton-candy);
+      font-size: 15px;
+      z-index: 20;
+    }
+  }
+
+.more-content {
+  overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+    height: 100px;}
+
+.article {
+    margin: auto;
+    width: 90%;
+    height: 450px;
+    z-index: 10;
+    display: flex;
+    background-image: url(../img/sushi_background8.jpg);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+
+.seating {
+    width: 300px;
+    background-image: url(../img/sushi_forest.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 2rem;
+}
+
+.aboutus {
+    width: 50%;
+    max-width: 370px;
+    color: var(--bisque-color);
+    line-height: 1.5;
+    padding: 2rem;
+    padding-left: 0;
+  }
+
+@media screen and (max-width: 1200px) {
+    .aboutus {
+      width: 100%;
+      max-width: 700px;
+      padding: 3rem;
+      margin: auto;
+    }
+    .seating {
+      width: 70%;
+      height: 60%;
+      object-fit: cover;
+      float: none;
+      margin: auto;
+      margin-top: 5rem;
+    }
+    .article {
+      flex-direction: column;
+      height: 100%;
+      width: 90%;
+      max-width: 90%;
+    }
+  }
+
+@media screen and (max-width: 900px) {
+    .aboutus {
+      width: 100%;
+      max-width: 800px;
+      padding: 2rem;
+    }
+    .seating {
+      width: 90%;
+      height: 60%;
+      object-fit: cover;
+      float: none;
+      margin: auto;
+      margin-top: 2rem;
+    }
+    .article {
+      flex-direction: column;
+      height: 100%;
+      width: 90%;
+    }
+  }
+
+#sakura {
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+    background-image: url(../img/sakura.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 600px;
+    right: 0;
+    z-index: 20;
+}
+
+@media screen and (max-width: 700px) {
+    #sakura {
+      width: 250px;
+      height: 250px;
+      top: 650px;
+      right: 0;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    #sakura {
+      width: 250px;
+      height: 250px;
+      top: 750px;
+      right: 0;
+    }
+  }
+
+
+footer {
+    overflow: hidden;
+    margin-top: 2rem;
+    background-color: var(--wine-red);
+    color:  var(--cotton-candy);
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+  }
+
