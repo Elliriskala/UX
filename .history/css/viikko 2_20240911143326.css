@@ -458,7 +458,7 @@ footer {
     width: 90%;
     max-width: 500px;
     padding: 1rem;
-    font-size: 13px;
+    font-size: 14px;
   }
   .seating {
     width: 85%;
@@ -470,16 +470,10 @@ footer {
   }
   .article {
     flex-direction: column;
-    height: 70vh;
+    height: 60%;
     width: 90%;
   }
 
-}
-
-@media screen and (max-width: 500px) {
-  .more-content {
-    font-size: 12px;
-  }
 }
 
 @media screen and (max-width: 700px) {

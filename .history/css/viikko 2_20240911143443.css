@@ -478,7 +478,7 @@ footer {
 
 @media screen and (max-width: 500px) {
   .more-content {
-    font-size: 12px;
+    height: 200px;
   }
 }
 
