@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  background-color: var(--dust-pink);
+  padding: 20px;
+}
+
+html {
+  background-color: var(--khaki-green);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(235, 223, 217);
+  --dust-pink: rgb(205, 189, 189);
+  --raspberry-pink: rgb(192, 164, 164);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(158, 173, 154);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+.container {
+  display: flex;
+  height: 60vh;
+  gap: 20px;
+}
+
+.nav {
+  display: flex;
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  padding: 0;
+  flex: 1;
+}
+
+.nav-list li {
+  margin: 2px;
+  list-style-type: none;
+}
+
+.nav-list li a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--forest-green);
+}
+
+.nav-list li a:hover {
+  color: var(--khaki-green);
+}
+
+.login {
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  background-color: var(--khaki-green);
+  height: 40px;
+}
+
+.login:hover {
+  background-color: var(--lime-green);
+}
+
+#left {
+  background-color: var(--raspberry-pink);
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.my-list {
+  padding: 10px;
+}
+
+#right {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.top{
+  flex-basis: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url(../img/sushi_background6.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.bottom{
+  flex: 1;
+}
+
+.bottom p {
+  color: var(--forest-green);
+}
+
+.cut {
+  width: 200px;
+  height: 150px;
+  float: left;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  shape-outside: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+footer {
+  background-color: var(--lime-green);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #left {
+    order: 2;
+  }
+
+  #right {
+    order: 1;
+  }
+}

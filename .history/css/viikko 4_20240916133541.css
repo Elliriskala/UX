@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--dust-pink);
+}
+
+html {
+  background-color: var(--khaki-green);
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(235, 223, 217);
+  --dust-pink: rgb(205, 189, 189);
+  --raspberry-pink: rgb(192, 164, 164);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(158, 173, 154);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+.container {
+  background-color: var(--cotton-candy);
+  display: flex;
+  height: 60vh;
+}
+
+#left {
+  background-color: var(--raspberry-pink);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right {
+  flex: 1;
+  background-color: var(--grey-green);
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  background-image: url(../img/sushi_background4.jpg);
+  background-size: contain;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.top{
+  flex-basis: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom{
+  flex: 1;
+}
+
+footer {
+  background-color: grey;
+  height: 100px;
+  width: 80%;
+  margin: auto;
+}

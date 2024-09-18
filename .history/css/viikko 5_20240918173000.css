@@ -1,0 +1,456 @@
+@font-face {
+  font-family: 'roboto mono';
+  src: url('../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'roboto mono', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--dust-pink);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(213, 195, 185);
+  --dust-pink: rgb(51, 44, 44);
+  --grey: #222025;
+  --soy-sauce: #1e181c;
+  --brown-grey: rgba(44, 33, 33, 0.911);
+  --raspberry-pink: rgb(200, 127, 127);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(24, 6, 2);
+  --forest-green: rgba(1, 12, 1, 0.815);
+  --grey-green: rgba(54, 71, 63, 0.908);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+dialog {
+  width: 20em;
+  background-color: var(--wine-red);
+  color: var(--cotton-candy);
+  border-radius: 1em;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+}
+
+legend {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+input {
+  border-radius: 1em;
+  background-color: var(--cotton-candy);
+  border-left: 0.5em solid;
+  transition: border-color 0.5s ease-in;
+  padding: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+input:invalid {
+  border-left-color: var(--intense-red);
+}
+
+input:valid {
+  border-left-color: var(--lime-green);
+}
+
+#login-image {
+  width: 10em;
+  height: 12em;
+  display: flex;
+  margin: auto;
+}
+
+.registration {
+  font-size: 1em;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.button {
+  padding: 0.5em;
+  background-color: var(--khaki-green);
+  color: var(--cotton-candy);
+  border-radius: 1em;
+}
+
+.button:hover {
+  background-color: var(--wine-red);
+  transition: 1s;
+}
+
+dialog::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    var(--brown-grey),
+    var(--dust-pink),
+    var(--khaki-green),
+    var(--forest-green)
+  );
+  opacity: 0.75;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  background-color: var(--grey);
+  margin: auto;
+  margin-top: 1em;
+  border-radius: 1em 1em 0 0;
+}
+
+.company {
+  margin: 0;
+  margin-left: 2em;
+  font-size: 1.5em;
+}
+
+.nav-list, .company {
+  display: flex;
+  padding: 0;
+}
+
+.nav-list li, .company li {
+  margin: 0.2em;
+  list-style-type: none;
+}
+
+.nav-list li a, .company li a {
+  display: inline-block;
+  padding: 0.8em;
+  text-decoration: none;
+  color: var(--cotton-candy);
+}
+
+.nav-list li a:hover {
+  color: var(--khaki-green);
+  transition: all 1s;
+}
+
+#login {
+  color: var(--cotton-candy);
+  font-size: 1.5em;
+  border: none;
+  transition: all;
+  margin-right: 2em;
+}
+
+#login:hover {
+  color: var(--khaki-green);
+  transition: all 1s;
+}
+
+.container {
+  display: flex;
+}
+
+.hero-image {
+  overflow: hidden;
+  background-image: url(../img/sushi_background3.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  width: 80%;
+  height: 100vh;
+  max-height: 40em;
+  z-index: 10;
+  border-radius: 0 0 1em 1em;
+}
+
+.hero-text {
+  max-width: 15em;
+  margin-left: 6em;
+  margin-top: 3em;
+  font-size: 1.2em;
+  overflow: hidden;
+  color: var(--cotton-candy);
+  z-index: 20;
+  text-shadow: 2px 2px 2px var(--forest-green);
+}
+
+.menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  flex-direction: column;
+  color: var(--cotton-candy);
+}
+
+.menu-list {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list ul {
+  padding: 0;
+}
+
+.menu-list li {
+  padding: 0.3em;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  padding: 0.8em;
+  border-radius: 1em;
+  color: var(--cotton-candy);
+  background-color: var(--brown-grey);
+}
+
+.menu-list li a:hover {
+  background-color: var(--soy-sauce);
+  transition: all 1s;
+}
+
+.article {
+  margin: auto;
+  width: 80%;
+  height: 22em;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/sushi_background9.jpg);
+  background-size: cover;
+  background-position: left;
+  position: relative;
+  border-radius: 1.5em;
+}
+
+.seating {
+  width: 15em;
+  height: 15em;
+  background-image: url(../img/sushi_forest.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5em;
+  margin: 2em;
+}
+
+.aboutus {
+  width: 50%;
+  max-width: 20em;
+  color: var(--cotton-candy);
+  line-height: 1.5;
+  padding: 1.5em;
+  padding-left: 0;
+}
+
+#sakura {
+  overflow: hidden;
+  width: 20em;
+  height: 20em;
+  background-image: url(../img/sakura.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 35em;
+  right: 4em;
+  z-index: 20;
+}
+
+footer {
+  font-size: 0.8em;
+  overflow: hidden;
+  margin-top: 2em;
+  background-color: var(--brown-grey);
+  color: var(--cotton-candy);
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+
+@media screen and (max-width: 500px) {
+  dialog {
+    width: 300px;
+    padding: 0.8em;
+    margin: 1.5em auto;
+    font-size: 0.8em;
+    border-radius: 1em;
+  }
+  #login-image {
+    width: 150px;
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+  }
+  .company {
+    margin: 0;
+  }
+  .company li a {
+    padding: 0.7em;
+  }
+  #login {
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: 35;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero-text {
+    font-size: 1.2em;
+    max-width: 12em;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .hero-text {
+    font-size: 1em;
+    max-width: 10em;
+    margin-left: 4.5em;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hero-text {
+    font-size: 0.9em;
+    max-width: 8em;
+    margin-top: 2em;
+    margin-left: 4em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-text {
+    font-size: 0.8em;
+    max-width: 7em;
+    margin-top: 2.5em;
+    margin-left: 2.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #sakura {
+    width: 250px;
+    height: 250px;
+    top: 650px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #sakura {
+    width: 200px;
+    height: 200px;
+    top: 690px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menus {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .aboutus {
+    font-size: 1em;
+    max-width: 15em;
+  }
+  .seating {
+    width: 15em;
+    height: 20em;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .aboutus{
+    order: 2;
+    max-width: fit-content;
+    width: 80%;
+    padding: 0;
+  }
+  .seating {
+    max-width: 80%;
+    width: 80%;
+    max-height: 30em;
+    order: 1;
+  }
+  .article {
+    flex-direction: column;
+    width: 60%;
+    height: 40em;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .article {
+    width: 70%;
+    height: 40em;
+  }
+  .aboutus {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aboutus {
+    font-size: 0.8em;
+    margin-bottom: 2em;
+  }
+  .seating {
+    width: 85%;
+    height: 60%;
+    object-fit: cover;
+  }
+  .article {
+    flex-direction: column;
+    height: 60vh;
+    width: 90%;
+  }
+}
+

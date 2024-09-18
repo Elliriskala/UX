@@ -1,0 +1,130 @@
+<html>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sushi Forest</title>
+      <meta charset="UTF-8" />
+      <link href="../css/viikko 5.css" rel="stylesheet" />
+      <script
+        src="https://kit.fontawesome.com/ce58f4085c.js"
+        crossorigin="anonymous"
+      ></script>
+    </head>
+
+    <body>
+      <header class="nav">
+        <ul class="company">
+          <li><a href="">Sushi Forest</a></li>
+        </ul>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="">Main page</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Contact us</a></li>
+          </ul>
+        </nav>
+        <i class="fa-solid fa-right-to-bracket" id="login"></i>
+      </header>
+      <section class="container">
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>Welcome to Sushi Forest</h1>
+            <p>
+              Come and enjoy the best sushi in town!<br />Read more about us and
+              our menu.
+            </p>
+          </div>
+        </div>
+      </section>
+      <main>
+        <dialog>
+          <form method="dialog">
+            <fieldset>
+              <legend>Register with your information</legend>
+              <img src="../img/lock.png" alt="loginimage" id="login-image" />
+              <div class="registration">
+                <label>Username:</label>
+                <input
+                  type="text"
+                  name="Username:"
+                  placeholder="Username"
+                  minlength="3"
+                  maxlength="15"
+                  title="Atleast 3 charachters needed"
+                  required
+                />
+                <label>Email address:</label>
+                <input
+                  type="email"
+                  name="Email"
+                  id=""
+                  placeholder="@metropolia.fi"
+                  required
+                />
+                <label>Password:</label>
+                <input
+                  type="password"
+                  name="Password"
+                  id="password"
+                  placeholder="Password"
+                  pattern="^(?=.*[A-Z])(?=.*\d.*\d).{8,}$"
+                  required
+                />
+              </div>
+              <div>
+                <button class="button">Submit</button>
+                <button class="button" id="close">Close</button>
+              </div>
+            </fieldset>
+          </form>
+        </dialog>
+        <div class="menus">
+          <h3>Our menus</h3>
+          <p>Browse our menus and find your favorite</p>
+          <div class="menu-list">
+            <ul>
+              <li>Sushi</li>
+              <li>Sashimi</li>
+              <li>Tempura</li>
+              <li>Donburi</li>
+              <li>Udon</li>
+            </ul>
+          </div>
+        </div>
+        <div class="article">
+          <div class="seating"></div>
+          <div class="aboutus">
+            <p>
+              MORE ABOUT US<br />
+              We are a small sushi restaurant with a big heart. We offer an
+              innovative Japanese cuisine experience with great taste and
+              freshness. Our handmade sushi is cooked in an open kitchen using
+              high quality ingredients. Welcome to enjoy our food and the
+              atmosphere!
+            </p>
+          </div>
+        </div>
+        <div id="sakura"></div>
+      </main>
+      <footer class="footer">
+        <p>Copyright</p>
+      </footer>
+      <script>
+        const dialog = document.querySelector('dialog');
+        const showButton = document.querySelector('i');
+        const closeButton = document.querySelector('#close');
+
+        // "Show the dialog" button opens the dialog modally
+        showButton.addEventListener('click', () => {
+          dialog.showModal();
+        });
+
+        // "Close" button closes the dialog
+        closeButton.addEventListener('click', () => {
+          dialog.close();
+        });
+      </script>
+    </body>
+  </html>
+</html>

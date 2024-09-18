@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  background-color: var(--dust-pink);
+  padding: 20px;
+}
+
+html {
+  background-color: var(--khaki-green);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(235, 223, 217);
+  --dust-pink: rgb(205, 189, 189);
+  --raspberry-pink: rgb(192, 164, 164);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(53, 14, 5);
+  --forest-green: rgb(10, 34, 10);
+  --grey-green: rgb(158, 173, 154);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+.container {
+  background-color: var(--cotton-candy);
+  display: flex;
+  height: 60vh;
+}
+
+.list-items {
+  list-style-type: none;
+}
+
+#nav-list {
+  display: flex;
+  flex-direction: row;
+}
+
+#left {
+  background-color: var(--raspberry-pink);
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.my-list {
+  padding: 10px;
+}
+
+#right {
+  flex: 5;
+  background-color: var(--grey-green);
+  display: flex;
+  flex-direction: column;
+}
+
+.top{
+  flex-basis: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom{
+  flex: 1;
+}
+
+footer {
+  background-color: var(--lime-green);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

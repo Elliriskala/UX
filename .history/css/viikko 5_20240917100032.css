@@ -1,0 +1,415 @@
+@font-face {
+  font-family: 'roboto mono';
+  src: url('../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'roboto mono', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  font-size: 20px;
+  background-color: var(--dust-pink);
+}
+
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+:root {
+  --bisque-color: rgb(224, 201, 167);
+  --cotton-candy: rgb(213, 195, 185);
+  --dust-pink: rgb(51, 44, 44);
+  --brown-grey: rgba(44, 33, 33, 0.911);
+  --raspberry-pink: rgb(200, 127, 127);
+  --intense-red: rgb(191, 77, 77);
+  --wine-red: rgb(24, 6, 2);
+  --forest-green: rgba(1, 12, 1, 0.815);
+  --grey-green: rgba(54, 71, 63, 0.908);
+  --khaki-green: rgb(93, 112, 80);
+  --lime-green: rgb(108, 134, 91);
+}
+
+dialog {
+  width: 500px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: var(--wine-red);
+  color: var(--cotton-candy);
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+input {
+  border-radius: 4px;
+  background-color: var(--cotton-candy);
+  border-left: 8px solid;
+  transition: border-color 0.5s ease-in;
+  padding: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+input:invalid {
+  border-left-color: var(--intense-red);
+}
+
+input:valid {
+  border-left-color: var(--lime-green);
+}
+
+.registration {
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.button {
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  background-color: var(--khaki-green);
+  color: var(--cotton-candy);
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: var(--wine-red);
+  transition: 1s;
+}
+
+dialog::backdrop {
+  background-image: linear-gradient(
+    45deg,
+    var(--khaki-green),
+    var(--lime-green),
+    var(--khaki-green),
+    var(--lime-green)
+  );
+  opacity: 0.75;
+}
+
+.nav {
+  display: flex;
+  padding: 2px;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  background-color: var(--forest-green);
+  margin: auto;
+  margin-top: 10px;
+}
+
+.company {
+  margin-left: 30px;
+  font-size: 25px;
+}
+
+.nav-list, .company {
+  display: flex;
+  padding: 0;
+}
+
+.nav-list li, .company li {
+  margin: 2px;
+  list-style-type: none;
+}
+
+.nav-list li a, .company li a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--cotton-candy);
+}
+
+.nav-list li a:hover {
+  color: var(--khaki-green);
+  transition: all 1s;
+}
+
+#login-image {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+#login {
+  color: var(--cotton-candy);
+  font-size: 25px;
+  border-radius: 10px;
+  border: none;
+  transition: all;
+  margin-right: 30px;
+
+}
+
+#login:hover {
+  color: var(--khaki-green);
+  transition: all 1s;
+}
+
+.container {
+  display: flex;
+}
+
+.hero-image {
+  overflow: hidden;
+  background-image: url(../img/sushi_background3.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  width: 80%;
+  height: 100vh;
+  min-height: 300px;
+  max-height: 600px;
+  z-index: 10;
+}
+
+.hero-text {
+  max-width: 300px;
+  margin-left: 60px;
+  margin-top: 20px;
+  overflow: hidden;
+  color: var(--cotton-candy);
+  font-size: 20px;
+  z-index: 20;
+  text-shadow: 2px 2px 2px var(--forest-green);
+}
+
+.menus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  flex-direction: column;
+  color: var(--cotton-candy);
+}
+
+.menu-list {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list ul {
+  padding: 0;
+}
+
+.menu-list li {
+  padding: 2px;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--cotton-candy);
+  background-color: var(--brown-grey);
+}
+
+.menu-list li a:hover {
+  color: var(--wine-red);
+  transition: all 1s;
+}
+
+.article {
+  margin: auto;
+  width: 80%;
+  height: 450px;
+  z-index: 10;
+  display: flex;
+  background-image: url(../img/sushi_background9.jpg);
+  background-size: cover;
+  background-position: left;
+  position: relative;
+}
+
+.seating {
+  width: 300px;
+  background-image: url(../img/sushi_forest.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.aboutus {
+  font-size: 18px;
+  width: 50%;
+  max-width: 300px;
+  color: var(--cotton-candy);
+  line-height: 1.5;
+  padding: 2rem;
+  padding-left: 0;
+}
+
+#sakura {
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  background-image: url(../img/sakura.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 600px;
+  right: 0;
+  z-index: 20;
+}
+
+footer {
+  font-size: 12px;
+  overflow: hidden;
+  margin-top: 2rem;
+  background-color: var(--brown-grey);
+  color: var(--cotton-candy);
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .aboutus {
+    width: 90%;
+    max-width: 700px;
+    padding: 1rem;
+    margin: auto;
+  }
+  .seating {
+    width: 90%;
+    height: 50%;
+    object-fit: cover;
+    float: none;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .article {
+    flex-direction: column;
+    height: 80vh;
+    width: 70%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aboutus {
+    width: 80%;
+    max-width: 800px;
+    padding: 1rem;
+    font-size: 18px;
+  }
+  .seating {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    float: none;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .article {
+    flex-direction: column;
+    height: 80vh;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutus {
+    width: 90%;
+    max-width: 500px;
+    padding: 1rem;
+    font-size: 13px;
+  }
+  .seating {
+    width: 85%;
+    height: 60%;
+    object-fit: cover;
+    float: none;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+  .article {
+    flex-direction: column;
+    height: 70vh;
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .more-content {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #sakura {
+    width: 250px;
+    height: 250px;
+    top: 650px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #sakura {
+    width: 250px;
+    height: 250px;
+    top: 750px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #sakura {
+    width: 200px;
+    height: 200px;
+    top: 690px;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  dialog {
+    width: 300px;
+    padding: 10px;
+    margin: 30px auto;
+    background-color: var(--wine-red);
+    color: var(--bisque-color);
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  #login-image {
+    width: 150px;
+    height: 170px;
+    border-radius: 20px;
+  }
+}
