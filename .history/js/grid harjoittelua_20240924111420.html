@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Grid touhua</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(110deg, #ffced9, #95db92);
+        min-height: 100vh;
+        margin: 50px;
+        background-attachment: fixed;
+      }
+
+      .container {
+        border: 1px solid red;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 200px 100px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+      }
+
+      .item {
+        border: 4px solid rgb(255, 90, 90);
+        border-radius: 3px;
+        font-size: 30px;
+        padding: 5px;
+        background-color: pink;
+        text-align: center;
+      }
+
+      .layout {
+        border: 1px solid rgb(184, 90, 255);
+        display: grid;
+        grid-template-columns: [vasen] 1fr 1fr 1fr [oikea];
+        grid-template-rows: 200px 200px 200px;
+      }
+
+      .solu {
+        border: 4px solid rgb(184, 90, 255);
+        border-radius: 3px;
+        font-size: 30px;
+        padding: 5px;
+        background-color: pink;
+        text-align: center;
+      }
+
+      .solu1 {
+        background-color: lightblue;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .solu2 {
+        background-color: lightcoral;
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        z-index: 10;
+      }
+
+      .solu3 {
+        background-color: rgb(103, 32, 42);
+        grid-column-start: vasen;
+        grid-column-end: oikea;
+      }
+
+      .solu6 {
+        background-color: lightgreen;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row: 1 / 3;
+        z-index: 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h3>Grid template areas: Layout perusteet</h3>
+    <div class="layout">
+      <div class="solu solu1">1</div>
+      <div class="solu solu2">2</div>
+      <div class="solu solu3">3</div>
+      <div class="solu solu4">4</div>
+      <div class="solu solu5">5</div>
+      <div class="solu solu6">6</div>
+      <div class="solu solu7">7</div>
+    </div>
+
+    <h3>Grid harjoittelua, repeat, auto-fit, minmax</h3>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+    </div>
+
+  </body>
+</html>

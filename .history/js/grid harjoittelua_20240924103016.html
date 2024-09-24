@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid touhua</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(110deg, #ffced9, #95db92);
+        min-height: 100vh;
+        margin: 50px;
+        background-attachment: fixed;
+      }
+
+      .container {
+        border: 1px solid red;
+        height: 500px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50px minmax(50px, 1fr) 1fr;
+        grid-template-rows: 200px 100px;
+        gap: 10px;
+      }
+
+      .item {
+        border: 4px solid rgb(255, 90, 90);
+        border-radius: 3px;
+        font-size: 30px;
+        padding: 5px;
+        background-color: pink;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Grid harjoittelua</h3>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item item2">Täällä myydään mansikoita, ole hyvä.</div>
+      <div class="item item3">3</div>
+      <div class="item item1">4</div>
+      <div class="item item2">5</div>
+      <div class="item item3">6</div>
+    </div>
+  </body>
+</html>
