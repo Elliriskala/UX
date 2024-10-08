@@ -1,0 +1,8 @@
+.breakpoint {
+  display: inline-block;
+}
+.breakpoint::after {
+  content: "XS";
+  color: red;
+  font-weight: bold;
+}

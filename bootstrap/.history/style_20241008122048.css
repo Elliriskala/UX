@@ -1,0 +1,15 @@
+.breakpoint {
+  display: inline-block;
+}
+.breakpoint::after {
+  content: "XS";
+  color: red;
+  font-weight: bold;
+}
+
+@media (min-width: 576px) {
+  .breakpoint::after {
+    content: "SM";
+    color: green;
+  }
+}
